@@ -42,7 +42,7 @@ function App() {
         setUsers([newUser, ...users]);
 
         userService
-            .addUser(newUser)
+            .createUser(newUser)
             .then(({ data: savedUser }) => setUsers([savedUser, ...users]))
             .catch((err) => {
                 setError(err.message);
